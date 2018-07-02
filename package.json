@@ -1,0 +1,19 @@
+{
+  "name": "project-nodejsapi",
+  "version": "1.0.0",
+  "description": "project nodeJS API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "json-parser": "^1.1.5",
+    "shortid": "^2.2.8",
+    "urlencoded-parser": "^1.0.0"
+  }
+}
