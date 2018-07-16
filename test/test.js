@@ -12,7 +12,7 @@ describe('Endpoint', function() {
     });
 
     it('Use chai-http to start and make requests to your server', function(done){
-      chai.request('http://localhost:3000') // it works when the server is running otherwise no! 
+      chai.request('http://localhost:3000') // it works when the server is running otherwise no!
         .get('/events')
         .end(function(err,res) {
           expect(res).to.have.status(200);
@@ -20,4 +20,18 @@ describe('Endpoint', function() {
           done();
         });
       });
+
+      it('testing the put events http request created with mocha', function() {
+        chai.request('http://localhost:3000')
+        .post('/events') // endpoint!
+        .send({
+          '_method': 'put',
+          'id': '1213',
+          'title': 'req.body.title',
+          'description': 'req.body.description',
+          'date': 'req.body.date'
+        })
+      });
 });
+
+//You should implement a test for the endpoint that creates an event
